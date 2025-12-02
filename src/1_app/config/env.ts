@@ -3,8 +3,7 @@ import { z } from "zod"
 
 export const env = createEnv({
 	server: {
-		// DATABASE_URL: z.url(),
-		// OPEN_AI_API_KEY: z.string().min(1),
+		DATABASE_URL: z.url().optional(),
 	},
 	experimental__runtimeEnv: process.env,
 })

@@ -1,6 +1,7 @@
-import type { Metadata } from "next"
-import type { LayoutProps } from "./type"
 import { LandingHeader } from "@widgets/header"
+
+import type { LayoutProps } from "./type"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
 	title: "Commsy - Landing",

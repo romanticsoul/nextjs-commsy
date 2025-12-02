@@ -1,6 +1,7 @@
-import type { Metadata } from "next"
-import type { LayoutProps } from "./type"
 import { fontSans, fontMono } from "../styles/fonts"
+
+import type { LayoutProps } from "./type"
+import type { Metadata } from "next"
 import "../styles/globals.css"
 
 export const metadata: Metadata = {
