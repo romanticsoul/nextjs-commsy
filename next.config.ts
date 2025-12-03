@@ -1,4 +1,4 @@
-import "@app/config/env"
+import "@shared/config/env"
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
