@@ -12,7 +12,7 @@ export function LandingLayout({ children }: LayoutProps) {
 	return (
 		<>
 			<LandingHeader />
-			{children}
+			<main>{children}</main>
 		</>
 	)
 }

@@ -3,8 +3,8 @@ import { Link } from "@shared/ui/link"
 
 export function Logo() {
 	return (
-		<Link href={ROUTES.HOME} className="text-lg font-medium">
-			commsy
+		<Link href={ROUTES.HOME} className="text-xl font-semibold">
+			recoms
 		</Link>
 	)
 }

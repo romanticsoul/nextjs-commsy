@@ -12,10 +12,10 @@ export function NavigationMenu() {
 					<Link href={ROUTES.HOME}>About</Link>
 				</li>
 				<li>
-					<Link href={ROUTES.HOME}>Pricing</Link>
+					<Link href={ROUTES.PRICING}>Pricing</Link>
 				</li>
 				<li>
-					<Link href={ROUTES.HOME}>Docs</Link>
+					<Link href={ROUTES.DOCUMENTATION}>Docs</Link>
 				</li>
 			</ul>
 		</nav>
