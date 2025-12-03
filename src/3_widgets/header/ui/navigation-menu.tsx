@@ -3,8 +3,8 @@ import { Link } from "@shared/ui/link"
 
 export function NavigationMenu() {
 	return (
-		<nav>
-			<ul className="flex gap-12">
+		<nav className="col-span-4">
+			<ul className="flex justify-center gap-12">
 				<li>
 					<Link href={ROUTES.HOME}>Home</Link>
 				</li>

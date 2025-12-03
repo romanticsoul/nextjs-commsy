@@ -1,6 +1,8 @@
+import { ROUTES } from "@shared/config/routes"
 import { Badge } from "@shared/ui/badge"
 import { Button } from "@shared/ui/button"
 import { Icon } from "@shared/ui/icon"
+import { Link } from "@shared/ui/link"
 import { Separator } from "@shared/ui/separator"
 
 const PLANS = [
@@ -14,6 +16,7 @@ const PLANS = [
 			"Доступ к документации и сообществу",
 		],
 		buttonText: "Get Started",
+		buttonHref: ROUTES.SIGNUP,
 	},
 	{
 		name: "Pro",
@@ -21,6 +24,7 @@ const PLANS = [
 		monthlyPrice: "$20",
 		features: ["Неограниченное количество комментариев", "Приоритетная поддержка"],
 		buttonText: "Purchase",
+		buttonHref: ROUTES.SIGNUP,
 		isPopular: true,
 	},
 ]
@@ -59,7 +63,9 @@ export function PricingSection() {
 											</li>
 										))}
 									</ul>
-									<Button className="w-full">{plan.buttonText}</Button>
+									<Button asChild className="w-full">
+										<Link href={plan.buttonHref}>{plan.buttonText}</Link>
+									</Button>
 								</div>
 							</div>
 						))}

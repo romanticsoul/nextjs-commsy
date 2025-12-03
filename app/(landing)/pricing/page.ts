@@ -1,1 +1,1 @@
-export { PricingPage as default } from "@pages/pricing"
+export { PricingPage as default, metadata } from "@pages/pricing"

@@ -6,7 +6,7 @@ export function LandingHeader() {
 	return (
 		<header className="border-border border-b py-5">
 			<div className="container">
-				<div className="flex h-full items-center justify-between">
+				<div className="grid grid-cols-8 items-center">
 					<Logo />
 					<NavigationMenu />
 					<AuthButtons />
