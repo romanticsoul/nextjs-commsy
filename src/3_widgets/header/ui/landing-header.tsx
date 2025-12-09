@@ -1,17 +1,16 @@
 import { AuthButtons } from "./auth-buttons"
+import { Header } from "./header"
 import { Logo } from "./logo"
 import { NavigationMenu } from "./navigation-menu"
 
 export function LandingHeader() {
 	return (
-		<header className="border-border border-b py-5">
-			<div className="container">
-				<div className="grid grid-cols-8 items-center">
-					<Logo />
-					<NavigationMenu />
-					<AuthButtons />
-				</div>
+		<Header>
+			<div className="grid grid-cols-8 items-center">
+				<Logo />
+				<NavigationMenu />
+				<AuthButtons />
 			</div>
-		</header>
+		</Header>
 	)
 }

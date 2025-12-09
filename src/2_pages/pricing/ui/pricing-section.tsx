@@ -16,7 +16,7 @@ const PLANS = [
 			"Доступ к документации и сообществу",
 		],
 		buttonText: "Get Started",
-		buttonHref: ROUTES.SIGNUP,
+		buttonHref: ROUTES.AUTH,
 	},
 	{
 		name: "Pro",
@@ -24,7 +24,7 @@ const PLANS = [
 		monthlyPrice: "$20",
 		features: ["Неограниченное количество комментариев", "Приоритетная поддержка"],
 		buttonText: "Purchase",
-		buttonHref: ROUTES.SIGNUP,
+		buttonHref: ROUTES.AUTH,
 		isPopular: true,
 	},
 ]
@@ -34,10 +34,8 @@ export function PricingSection() {
 		<section className={`py-32`}>
 			<div className="container">
 				<div className="flex flex-col gap-6">
-					<h1 className="text-3xl font-black text-pretty lg:text-6xl">Pricing</h1>
-					<p className="text-muted-foreground max-w-3xl lg:text-xl">
-						Check out our affordable pricing plans
-					</p>
+					<h1 className="text-h1">Pricing</h1>
+					<p className="text-description">Check out our affordable pricing plans</p>
 					<div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
 						{PLANS.map((plan) => (
 							<div

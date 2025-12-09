@@ -5,11 +5,8 @@ import { Link } from "@shared/ui/link"
 export function AuthButtons() {
 	return (
 		<div className="col-span-2 flex justify-end gap-2">
-			<Button asChild variant="outline" size="lg">
-				<Link href={ROUTES.LOGIN}>Login</Link>
-			</Button>
 			<Button asChild size="lg">
-				<Link href={ROUTES.SIGNUP}>Sign up</Link>
+				<Link href={ROUTES.AUTH}>Login</Link>
 			</Button>
 		</div>
 	)

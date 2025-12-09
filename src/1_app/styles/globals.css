@@ -4,10 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @utility container {
-	height: 100%;
-	margin: 0 auto;
-	padding: 0 20px;
-	max-width: 1280px;
+	@apply mx-auto h-full max-w-7xl px-5;
+}
+
+@utility text-h1 {
+	@apply text-3xl font-black text-pretty lg:text-6xl;
+}
+
+@utility text-description {
+	@apply text-muted-foreground text-balance lg:text-lg;
 }
 
 :root {

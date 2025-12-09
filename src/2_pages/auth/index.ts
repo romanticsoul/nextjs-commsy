@@ -1,1 +1,1 @@
-export { SignupPage, metadata } from "./ui/signup"
+export { AuthPage, authMetadata } from "./ui/auth"

@@ -1,7 +1,12 @@
 export const ROUTES = {
 	HOME: "/",
 	PRICING: "/pricing",
-	LOGIN: "/login",
-	SIGNUP: "/signup",
+	AUTH: "/auth",
 	DOCUMENTATION: "/docs",
+	PRIVACY_POLICE: "/privacy-police",
+	TERMS_OF_SERVICE: "/terms-of-service",
+}
+
+export const PRIVATE_ROUTES = {
+	DASHBOARD: "/p",
 }
