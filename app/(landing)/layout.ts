@@ -1,1 +1,1 @@
-export { LandingLayout as default, metadata } from "@app/layouts/landing"
+export { LandingLayout as default } from "@app/layouts/landing"

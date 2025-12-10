@@ -1,10 +1,12 @@
+import { UserPreview } from "@features/user-preview"
 import { ROUTES } from "@shared/config/routes"
 import { Button } from "@shared/ui/button"
 import { Link } from "@shared/ui/link"
+
 import { Header } from "./header"
 import { Logo } from "./logo"
 
-export function LandingHeader() {
+export function DashboardHeader() {
 	return (
 		<Header>
 			<div className="grid grid-cols-8 items-center">
@@ -12,13 +14,13 @@ export function LandingHeader() {
 				<nav className="col-span-4">
 					<ul className="flex justify-center gap-12">
 						<li>
-							<Link href={ROUTES.HOME}>Home</Link>
+							<Link href={ROUTES.HOME}>Overview</Link>
 						</li>
 						<li>
-							<Link href={ROUTES.HOME}>About</Link>
+							<Link href={ROUTES.HOME}>Comments</Link>
 						</li>
 						<li>
-							<Link href={ROUTES.PRICING}>Pricing</Link>
+							<Link href={ROUTES.PRICING}>Settings</Link>
 						</li>
 						<li>
 							<Link href={ROUTES.DOCUMENTATION}>Docs</Link>
@@ -26,9 +28,7 @@ export function LandingHeader() {
 					</ul>
 				</nav>
 				<div className="col-span-2 flex justify-end gap-2">
-					<Button asChild size="lg">
-						<Link href={ROUTES.AUTH}>Login</Link>
-					</Button>
+					<UserPreview />
 				</div>
 			</div>
 		</Header>
