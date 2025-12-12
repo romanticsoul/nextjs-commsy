@@ -1,11 +1,18 @@
+import { cn } from "@shared/lib/utils"
 import { icons, type LucideProps } from "lucide-react"
 
 type IconName = keyof typeof icons
 type SVGIconProps = React.ComponentProps<"svg">
 
-export const Icon = ({ name, ...props }: { name: IconName } & LucideProps) => {
+export const Icon = ({ name, className, ...props }: { name: IconName } & LucideProps) => {
 	const LucideIcon = icons[name]
-	return <LucideIcon className="size-5" strokeWidth={2} {...props} />
+	return (
+		<LucideIcon
+			className={cn("size-4 text-inherit", className)}
+			strokeWidth={2.6}
+			{...props}
+		/>
+	)
 }
 
 type GitHubIconProps = SVGIconProps & {

@@ -1,3 +1,8 @@
+import { routing } from "@shared/i18n"
+import { notFound } from "next/navigation"
+import { NextIntlClientProvider, hasLocale } from "next-intl"
+import { setRequestLocale } from "next-intl/server"
+
 import { fontSans, fontMono } from "../styles/fonts"
 
 import type { LayoutProps } from "./type"
@@ -9,13 +14,21 @@ export const metadata: Metadata = {
 	description: "The saas comment service",
 }
 
-export function RootLayout({ children }: LayoutProps) {
+export async function RootLayout({ children, params }: LayoutProps) {
+	const { locale } = await params
+
+	if (!hasLocale(routing.locales, locale)) {
+		notFound()
+	}
+
+	setRequestLocale(locale)
+
 	return (
-		<html lang="ru">
+		<html lang={locale}>
 			<body
 				className={`bg-background text-foreground ${fontSans.variable} ${fontMono.className} antialiased`}
 			>
-				{children}
+				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 			</body>
 		</html>
 	)
