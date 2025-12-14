@@ -27,9 +27,8 @@ export function LandingHeader() {
 					</ul>
 				</nav>
 				<div className="col-span-2 flex justify-end gap-2">
-					<Button nativeButton={false} render={<Link href={ROUTES.AUTH} />} size="lg">
-						123
-						{/* <Link href={ROUTES.AUTH}>Login</Link> */}
+					<Button asChild size="lg">
+						<Link href={ROUTES.AUTH}>Login</Link>
 					</Button>
 				</div>
 			</div>

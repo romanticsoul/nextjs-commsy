@@ -52,18 +52,12 @@ async function DashboardNavigationMenu() {
 	return (
 		<div className="flex gap-2">
 			{MENU.map(({ href, icon, primary, text }) => (
-				<Button
-					key={text}
-					nativeButton={false}
-					render={
-						<Link href={href}>
-							{icon}
-							{text}
-						</Link>
-					}
-					size="lg"
-					variant={primary ? "default" : "secondary"}
-				/>
+				<Button key={text} size="lg" variant={primary ? "default" : "secondary"}>
+					<Link href={href}>
+						{icon}
+						{text}
+					</Link>
+				</Button>
 			))}
 		</div>
 	)

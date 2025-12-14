@@ -1,7 +1,7 @@
 import { ROUTES } from "@shared/config/routes"
+import { Link } from "@shared/i18n"
 import { Button } from "@shared/ui/button"
 import { Icon } from "@shared/ui/icon"
-import { Link } from "@shared/ui/link"
 import { Header } from "@widgets/header"
 
 import type { LayoutProps } from "./type"
@@ -11,17 +11,12 @@ export function AuthLayout({ children }: LayoutProps) {
 		<>
 			<div className="flex min-h-dvh flex-col">
 				<Header>
-					<Button
-						nativeButton={false}
-						render={
-							<Link href={ROUTES.HOME}>
-								<Icon name="IconChevronLeft" />
-								Back to home
-							</Link>
-						}
-						size="lg"
-						variant="outline"
-					/>
+					<Button asChild size="lg" variant="outline">
+						<Link href={ROUTES.HOME}>
+							<Icon name="IconChevronLeft" />
+							Back to home
+						</Link>
+					</Button>
 				</Header>
 				<main className="container flex flex-1">{children}</main>
 				<footer className="py-5">

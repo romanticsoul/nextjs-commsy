@@ -53,19 +53,17 @@ export function PricingSection() {
 								</p>
 								<Separator className="my-6" />
 								<div className="flex h-full flex-col justify-between gap-20">
-									<ul className="space-y-4 text-muted-foreground">
+									<ul className="text-muted-foreground space-y-4">
 										{plan.features.map((feature, featureIndex) => (
 											<li className="flex items-center gap-2" key={featureIndex}>
-												<Icon name="Check" />
+												<Icon name="IconCheck" />
 												<span>{feature}</span>
 											</li>
 										))}
 									</ul>
-									<Button
-										className="w-full"
-										nativeButton={false}
-										render={<Link href={plan.buttonHref}>{plan.buttonText}</Link>}
-									/>
+									<Button asChild className="w-full">
+										<Link href={plan.buttonHref}>{plan.buttonText}</Link>
+									</Button>
 								</div>
 							</div>
 						))}
