@@ -1,5 +1,28 @@
 {
-	"HomePage": {
-		"title": "Привет мир!"
+	"layout": {
+		"auth": {
+			"back-button": "Назад",
+			"title": "Добро пожаловать в recoms",
+			"description": "Используйте удобный для вас сервис авторизации",
+			"terms-of-service": "Правила использования",
+			"privacy-of-police": "Политика конфиденциальности",
+			"login-with-github": "войти с помощью GitHub",
+			"login-with-google": "войти с помощью Google"
+		},
+		"landing-header": {
+			"home-link": "Главная",
+			"about-link": "О нас",
+			"pricing-link": "Цены",
+			"documentation-link": "Документация",
+			"auth-button": "Войти"
+		}
+	},
+	"landing": {
+		"home": {
+			"hero-title": "Комментарии для вашего сайта с автоматической модерацией",
+			"hero-description": "Комментарии без навязанного пользовательского интерфейса. Вы создаете форму, а мы заботимся об их хранении, модерации и защите от спама",
+			"hero-action-button": "Начать работу",
+			"hero-documentation-button": "Документация"
+		}
 	}
 }

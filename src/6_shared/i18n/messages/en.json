@@ -1,5 +1,28 @@
 {
-	"HomePage": {
-		"title": "Hello world!"
+	"layout": {
+		"auth": {
+			"back-button": "Back to home",
+			"title": "Welcome to recoms",
+			"description": "Use a service that is convenient for you to log in",
+			"terms-of-service": "Terms of service",
+			"privacy-of-police": "Privacy of police",
+			"login-with-github": "sign in with GitHub",
+			"login-with-google": "sign in with Google"
+		},
+		"landing-header": {
+			"home-link": "Home",
+			"about-link": "About",
+			"pricing-link": "Pricing",
+			"documentation-link": "Docs",
+			"auth-button": "Login"
+		}
+	},
+	"landing": {
+		"home": {
+			"hero-title": "Comments for your site with automatic moderation",
+			"hero-description": "Comments without an imposed user interface. You create the form, and we take care of their storage, moderation, and spam protection",
+			"hero-action-button": "Get started",
+			"hero-documentation-button": "Read the docs"
+		}
 	}
 }

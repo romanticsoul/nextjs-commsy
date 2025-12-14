@@ -3,7 +3,6 @@ import { PRIVATE_ROUTES } from "@shared/config/routes"
 import { Button } from "@shared/ui/button"
 import { Icon } from "@shared/ui/icon"
 import { Link } from "@shared/ui/link"
-import { getTranslations } from "next-intl/server"
 
 import { Header } from "./header"
 import { Logo } from "./logo"
@@ -23,14 +22,12 @@ export function DashboardHeader() {
 }
 
 async function DashboardNavigationMenu() {
-	const t = await getTranslations("HomePage")
-
 	const MENU = [
 		{
 			href: PRIVATE_ROUTES.DASHBOARD,
 			icon: <Icon name="IconChartPie" />,
 			primary: true,
-			text: t("title"),
+			text: "Overview",
 		},
 		{
 			href: PRIVATE_ROUTES.DASHBOARD,

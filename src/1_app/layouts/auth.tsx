@@ -1,12 +1,14 @@
 import { ROUTES } from "@shared/config/routes"
-import { Link } from "@shared/i18n"
 import { Button } from "@shared/ui/button"
 import { Icon } from "@shared/ui/icon"
+import { Link } from "@shared/ui/link"
 import { Header } from "@widgets/header"
+import { getTranslations } from "next-intl/server"
 
 import type { LayoutProps } from "./type"
 
-export function AuthLayout({ children }: LayoutProps) {
+export async function AuthLayout({ children }: LayoutProps) {
+	const t = await getTranslations("layout.auth")
 	return (
 		<>
 			<div className="flex min-h-dvh flex-col">
@@ -14,7 +16,7 @@ export function AuthLayout({ children }: LayoutProps) {
 					<Button asChild size="lg" variant="outline">
 						<Link href={ROUTES.HOME}>
 							<Icon name="IconChevronLeft" />
-							Back to home
+							{t("back-button")}
 						</Link>
 					</Button>
 				</Header>
@@ -22,9 +24,9 @@ export function AuthLayout({ children }: LayoutProps) {
 				<footer className="py-5">
 					<div className="container">
 						<div className="flex items-center justify-center gap-6">
-							<Link href={ROUTES.TERMS_OF_SERVICE}>Terms of service</Link>
+							<Link href={ROUTES.TERMS_OF_SERVICE}>{t("terms-of-service")}</Link>
 							<span>/</span>
-							<Link href={ROUTES.PRIVACY_POLICE}>Privacy of police</Link>
+							<Link href={ROUTES.PRIVACY_POLICE}>{t("privacy-of-police")}</Link>
 						</div>
 					</div>
 				</footer>
