@@ -1,10 +1,10 @@
-import { PricingSection } from "./pricing-section"
-
 import type { Metadata } from "next"
 
+import { PricingSection } from "./pricing-section"
+
 export const metadata: Metadata = {
-	title: "Pricing",
 	description: "The saas comment service",
+	title: "Pricing",
 }
 
 export function PricingPage() {

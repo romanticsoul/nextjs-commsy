@@ -3,30 +3,24 @@ import { createNavigation } from "next-intl/navigation"
 import { defineRouting } from "next-intl/routing"
 import { getRequestConfig } from "next-intl/server"
 
-// import ruMessages from "./messages/ru.json"
+import Messages from "./messages/ru.json"
 
 export const routing = defineRouting({
-	// A list of all locales that are supported
-	locales: ["ru", "en"],
-
-	// Used when no locale matches
 	defaultLocale: "ru",
 	localePrefix: "as-needed",
+	locales: ["ru", "en"],
 })
 
-// Lightweight wrappers around Next.js' navigation
-// APIs that consider the routing configuration
-export const { Link, redirect, usePathname, useRouter, getPathname } =
+export const { getPathname, Link, redirect, usePathname, useRouter } =
 	createNavigation(routing)
 
 export default getRequestConfig(async ({ requestLocale }) => {
-	// Typically corresponds to the `[locale]` segment
 	const requested = await requestLocale
 	const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale
 
 	return {
 		locale,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+		 
 		messages: (await import(`./messages/${locale}.json`)).default,
 	}
 })
@@ -34,7 +28,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 declare module "next-intl" {
 	interface AppConfig {
 		Locale: (typeof routing.locales)[number]
-		// Messages: typeof ruMessages
+		Messages: typeof Messages
 		// Formats: typeof formats
 	}
 }

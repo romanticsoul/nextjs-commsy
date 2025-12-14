@@ -4,7 +4,7 @@ interface HeaderProps {
 
 export function Header({ children }: HeaderProps) {
 	return (
-		<header className="bg-background/80 sticky top-0 z-50 border-b py-5 backdrop-blur">
+		<header className="sticky top-0 z-50 border-b bg-background/80 py-5 backdrop-blur">
 			<div className="container">{children}</div>
 		</header>
 	)

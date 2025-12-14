@@ -1,10 +1,10 @@
-import { HeroSection } from "./hero-section"
-
 import type { Metadata } from "next"
 
+import { HeroSection } from "./hero-section"
+
 export const metadata: Metadata = {
-	title: "Home",
 	description: "The saas comment service",
+	title: "Home",
 }
 
 export function HomePage() {

@@ -1,6 +1,7 @@
 import { ROUTES } from "@shared/config/routes"
 import { Button } from "@shared/ui/button"
 import { Link } from "@shared/ui/link"
+
 import { Header } from "./header"
 import { Logo } from "./logo"
 
@@ -26,8 +27,9 @@ export function LandingHeader() {
 					</ul>
 				</nav>
 				<div className="col-span-2 flex justify-end gap-2">
-					<Button asChild size="lg">
-						<Link href={ROUTES.AUTH}>Login</Link>
+					<Button nativeButton={false} render={<Link href={ROUTES.AUTH} />} size="lg">
+						123
+						{/* <Link href={ROUTES.AUTH}>Login</Link> */}
 					</Button>
 				</div>
 			</div>

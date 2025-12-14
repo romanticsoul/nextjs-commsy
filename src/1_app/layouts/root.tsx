@@ -1,17 +1,18 @@
-import { routing } from "@shared/i18n"
-import { notFound } from "next/navigation"
-import { NextIntlClientProvider, hasLocale } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import type { Metadata } from "next"
 
-import { fontSans, fontMono } from "../styles/fonts"
+import { routing } from "@shared/i18n"
+import { hasLocale, NextIntlClientProvider } from "next-intl"
+import { setRequestLocale } from "next-intl/server"
+import { notFound } from "next/navigation"
 
 import type { LayoutProps } from "./type"
-import type { Metadata } from "next"
+
+import { fontMono, fontSans } from "../styles/fonts"
 import "../styles/globals.css"
 
 export const metadata: Metadata = {
-	title: "recoms",
 	description: "The saas comment service",
+	title: "recoms",
 }
 
 export async function RootLayout({ children, params }: LayoutProps) {

@@ -1,1 +1,1 @@
-export { PricingPage, metadata } from "./ui/pricing"
+export { metadata, PricingPage } from "./ui/pricing"

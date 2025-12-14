@@ -1,11 +1,11 @@
+import type { Metadata } from "next"
+
 import { Button } from "@shared/ui/button"
 import { GitHubIcon, GoogleIcon } from "@shared/ui/icon"
 
-import type { Metadata } from "next"
-
 export const authMetadata: Metadata = {
-	title: "Auth — recoms",
 	description: "The saas comment service",
+	title: "Auth — recoms",
 }
 
 export function AuthPage() {
@@ -18,12 +18,12 @@ export function AuthPage() {
 				</p>
 			</div>
 			<div className="grid gap-2">
-				<Button variant="default" size="lg">
-					<GitHubIcon theme="dark" className="size-5 not-dark:hidden" />
-					<GitHubIcon theme="light" className="size-5 dark:hidden" />
+				<Button size="lg" variant="default">
+					<GitHubIcon className="size-5 not-dark:hidden" theme="dark" />
+					<GitHubIcon className="size-5 dark:hidden" theme="light" />
 					Sign in with GitHub
 				</Button>
-				<Button variant="default" size="lg">
+				<Button size="lg" variant="default">
 					<GoogleIcon className="size-5" />
 					Sign in with Google
 				</Button>

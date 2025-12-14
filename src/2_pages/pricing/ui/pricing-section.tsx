@@ -7,25 +7,25 @@ import { Separator } from "@shared/ui/separator"
 
 const PLANS = [
 	{
-		name: "Free",
 		badge: "Free",
-		monthlyPrice: "$0",
+		buttonHref: ROUTES.AUTH,
+		buttonText: "Get Started",
 		features: [
 			"До 1,000 комментариев в месяц",
 			"Неограниченное количество интеграций",
 			"Доступ к документации и сообществу",
 		],
-		buttonText: "Get Started",
-		buttonHref: ROUTES.AUTH,
+		monthlyPrice: "$0",
+		name: "Free",
 	},
 	{
-		name: "Pro",
 		badge: "Pro",
-		monthlyPrice: "$20",
-		features: ["Неограниченное количество комментариев", "Приоритетная поддержка"],
-		buttonText: "Purchase",
 		buttonHref: ROUTES.AUTH,
+		buttonText: "Purchase",
+		features: ["Неограниченное количество комментариев", "Приоритетная поддержка"],
 		isPopular: true,
+		monthlyPrice: "$20",
+		name: "Pro",
 	},
 ]
 
@@ -39,10 +39,10 @@ export function PricingSection() {
 					<div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
 						{PLANS.map((plan) => (
 							<div
-								key={plan.name}
 								className={`flex w-full flex-col rounded-lg border p-6 text-left ${
 									plan.isPopular ? "bg-muted" : ""
 								}`}
+								key={plan.name}
 							>
 								<Badge className="mb-8 block w-fit uppercase">{plan.badge}</Badge>
 								<span className="text-4xl font-medium">{plan.monthlyPrice}</span>
@@ -53,17 +53,19 @@ export function PricingSection() {
 								</p>
 								<Separator className="my-6" />
 								<div className="flex h-full flex-col justify-between gap-20">
-									<ul className="text-muted-foreground space-y-4">
+									<ul className="space-y-4 text-muted-foreground">
 										{plan.features.map((feature, featureIndex) => (
-											<li key={featureIndex} className="flex items-center gap-2">
+											<li className="flex items-center gap-2" key={featureIndex}>
 												<Icon name="Check" />
 												<span>{feature}</span>
 											</li>
 										))}
 									</ul>
-									<Button asChild className="w-full">
-										<Link href={plan.buttonHref}>{plan.buttonText}</Link>
-									</Button>
+									<Button
+										className="w-full"
+										nativeButton={false}
+										render={<Link href={plan.buttonHref}>{plan.buttonText}</Link>}
+									/>
 								</div>
 							</div>
 						))}

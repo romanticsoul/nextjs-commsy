@@ -14,12 +14,19 @@ export function HeroSection() {
 					</p>
 				</div>
 				<div className="flex justify-center gap-4">
-					<Button asChild size="lg" className="mt-10">
-						<Link href={ROUTES.AUTH}>Get started</Link>
-					</Button>
-					<Button asChild size="lg" variant="outline" className="mt-10">
-						<Link href={ROUTES.DOCUMENTATION}>Read the docs</Link>
-					</Button>
+					<Button
+						className="mt-10"
+						nativeButton={false}
+						render={<Link href={ROUTES.AUTH}>Get started</Link>}
+						size="lg"
+					/>
+					<Button
+						className="mt-10"
+						nativeButton={false}
+						render={<Link href={ROUTES.DOCUMENTATION}>Read the docs</Link>}
+						size="lg"
+						variant="outline"
+					/>
 				</div>
 			</div>
 		</section>

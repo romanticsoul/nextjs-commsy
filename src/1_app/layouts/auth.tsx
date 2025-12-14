@@ -11,12 +11,17 @@ export function AuthLayout({ children }: LayoutProps) {
 		<>
 			<div className="flex min-h-dvh flex-col">
 				<Header>
-					<Button asChild variant="outline" size="lg">
-						<Link href={ROUTES.HOME}>
-							<Icon name="ChevronLeft" />
-							Back to home
-						</Link>
-					</Button>
+					<Button
+						nativeButton={false}
+						render={
+							<Link href={ROUTES.HOME}>
+								<Icon name="IconChevronLeft" />
+								Back to home
+							</Link>
+						}
+						size="lg"
+						variant="outline"
+					/>
 				</Header>
 				<main className="container flex flex-1">{children}</main>
 				<footer className="py-5">

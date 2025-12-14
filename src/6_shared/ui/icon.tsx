@@ -1,15 +1,15 @@
 import { cn } from "@shared/lib/utils"
-import { icons, type LucideProps } from "lucide-react"
+import { type IconProps, icons } from "@tabler/icons-react"
 
 type IconName = keyof typeof icons
 type SVGIconProps = React.ComponentProps<"svg">
 
-export const Icon = ({ name, className, ...props }: { name: IconName } & LucideProps) => {
-	const LucideIcon = icons[name]
+export const Icon = ({ className, name, ...props }: IconProps & { name: IconName }) => {
+	const TablerIcon = icons[name]
 	return (
-		<LucideIcon
+		<TablerIcon
 			className={cn("size-4 text-inherit", className)}
-			strokeWidth={2.6}
+			stroke={2.6}
 			{...props}
 		/>
 	)
@@ -25,13 +25,13 @@ export const GitHubIcon = ({ theme, ...props }: GitHubIconProps) => {
 
 	return (
 		<svg
-			viewBox="0 0 24 24"
-			role="img"
-			xmlns="http://www.w3.org/2000/svg"
 			aria-hidden="true"
-			focusable="false"
 			fill={fillColor}
+			focusable="false"
+			role="img"
 			stroke={strokeColor}
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
 			{...props}
 		>
 			<path
@@ -45,11 +45,11 @@ export const GitHubIcon = ({ theme, ...props }: GitHubIconProps) => {
 export const GoogleIcon = (props: SVGIconProps) => {
 	return (
 		<svg
-			viewBox="0 0 256 262"
-			xmlns="http://www.w3.org/2000/svg"
-			preserveAspectRatio="xMidYMid"
 			aria-hidden="true"
 			focusable="false"
+			preserveAspectRatio="xMidYMid"
+			viewBox="0 0 256 262"
+			xmlns="http://www.w3.org/2000/svg"
 			{...props}
 		>
 			<path

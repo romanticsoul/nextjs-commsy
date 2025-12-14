@@ -8,47 +8,6 @@ import { getTranslations } from "next-intl/server"
 import { Header } from "./header"
 import { Logo } from "./logo"
 
-async function DashboardNavigationMenu() {
-	const t = await getTranslations("HomePage")
-
-	const MENU = [
-		{
-			text: t("title"),
-			icon: <Icon name="ChartPie" />,
-			href: PRIVATE_ROUTES.DASHBOARD,
-			primary: true,
-		},
-		{
-			text: "Comments",
-			icon: <Icon name="MessageCircle" />,
-			href: PRIVATE_ROUTES.DASHBOARD,
-		},
-		{
-			text: "Settings",
-			icon: <Icon name="Settings" />,
-			href: PRIVATE_ROUTES.DASHBOARD,
-		},
-		{
-			text: "Api docs",
-			icon: <Icon name="CodeXml" />,
-			href: PRIVATE_ROUTES.DASHBOARD,
-		},
-	]
-
-	return (
-		<div className="flex gap-2">
-			{MENU.map(({ text, primary, icon, href }) => (
-				<Button variant={primary ? "default" : "secondary"} key={text} size="lg" asChild>
-					<Link href={href}>
-						{icon}
-						{text}
-					</Link>
-				</Button>
-			))}
-		</div>
-	)
-}
-
 export function DashboardHeader() {
 	return (
 		<Header>
@@ -60,5 +19,52 @@ export function DashboardHeader() {
 				<div className="flex justify-end gap-2">{/* <UserPreview /> */}</div>
 			</div>
 		</Header>
+	)
+}
+
+async function DashboardNavigationMenu() {
+	const t = await getTranslations("HomePage")
+
+	const MENU = [
+		{
+			href: PRIVATE_ROUTES.DASHBOARD,
+			icon: <Icon name="IconChartPie" />,
+			primary: true,
+			text: t("title"),
+		},
+		{
+			href: PRIVATE_ROUTES.DASHBOARD,
+			icon: <Icon name="IconMessageCircle" />,
+			text: "Comments",
+		},
+		{
+			href: PRIVATE_ROUTES.DASHBOARD,
+			icon: <Icon name="IconSettings" />,
+			text: "Settings",
+		},
+		{
+			href: PRIVATE_ROUTES.DASHBOARD,
+			icon: <Icon name="IconCode" />,
+			text: "Api docs",
+		},
+	]
+
+	return (
+		<div className="flex gap-2">
+			{MENU.map(({ href, icon, primary, text }) => (
+				<Button
+					key={text}
+					nativeButton={false}
+					render={
+						<Link href={href}>
+							{icon}
+							{text}
+						</Link>
+					}
+					size="lg"
+					variant={primary ? "default" : "secondary"}
+				/>
+			))}
+		</div>
 	)
 }

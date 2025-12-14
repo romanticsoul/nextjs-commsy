@@ -1,7 +1,6 @@
 import { PRIVATE_ROUTES } from "@shared/config/routes"
-import { Avatar, AvatarImage, AvatarFallback } from "@shared/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@shared/ui/avatar"
 import { Badge } from "@shared/ui/badge"
-import { Button } from "@shared/ui/button"
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -10,8 +9,45 @@ import {
 	DropdownMenuTrigger,
 } from "@shared/ui/dropdown-menu"
 import { Icon } from "@shared/ui/icon"
-import { Separator } from "@shared/ui/separator"
 import Link from "next/link"
+
+export function UserPreview() {
+	return (
+		<DropdownMenu>
+			<DropdownMenuTrigger asChild>
+				<UserButton />
+			</DropdownMenuTrigger>
+			<DropdownMenuContent align="end" side="bottom">
+				<DropdownMenuItem asChild>
+					<Link href={PRIVATE_ROUTES.DASHBOARD}>
+						<Icon className="size-4.5" name="User" />
+						Profile
+					</Link>
+				</DropdownMenuItem>
+				<DropdownMenuItem asChild>
+					<Link href={PRIVATE_ROUTES.DASHBOARD}>
+						<Icon className="size-4.5" name="CreditCard" />
+						Subscription
+						<Badge className="ml-6">Pro</Badge>
+					</Link>
+				</DropdownMenuItem>
+				<DropdownMenuItem asChild>
+					<Link href={PRIVATE_ROUTES.DASHBOARD}>
+						<Icon className="size-4.5" name="Info" />
+						Help center
+					</Link>
+				</DropdownMenuItem>
+				<DropdownMenuSeparator />
+				<DropdownMenuItem asChild>
+					<Link href={PRIVATE_ROUTES.DASHBOARD}>
+						<Icon className="size-4.5" name="LogOut" />
+						Sign out
+					</Link>
+				</DropdownMenuItem>
+			</DropdownMenuContent>
+		</DropdownMenu>
+	)
+}
 
 function UserButton() {
 	return (
@@ -25,7 +61,7 @@ function UserButton() {
 					</span>
 				</div>
 				<Avatar className="size-9 rounded-sm">
-					<AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+					<AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
 					<AvatarFallback>CN</AvatarFallback>
 				</Avatar>
 			</div>
@@ -36,43 +72,5 @@ function UserButton() {
 			</Button> */}
 		</div>
 		// </Button>
-	)
-}
-
-export function UserPreview() {
-	return (
-		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
-				<UserButton />
-			</DropdownMenuTrigger>
-			<DropdownMenuContent side="bottom" align="end">
-				<DropdownMenuItem asChild>
-					<Link href={PRIVATE_ROUTES.DASHBOARD}>
-						<Icon name="User" className="size-4.5" />
-						Profile
-					</Link>
-				</DropdownMenuItem>
-				<DropdownMenuItem asChild>
-					<Link href={PRIVATE_ROUTES.DASHBOARD}>
-						<Icon name="CreditCard" className="size-4.5" />
-						Subscription
-						<Badge className="ml-6">Pro</Badge>
-					</Link>
-				</DropdownMenuItem>
-				<DropdownMenuItem asChild>
-					<Link href={PRIVATE_ROUTES.DASHBOARD}>
-						<Icon name="Info" className="size-4.5" />
-						Help center
-					</Link>
-				</DropdownMenuItem>
-				<DropdownMenuSeparator />
-				<DropdownMenuItem asChild>
-					<Link href={PRIVATE_ROUTES.DASHBOARD}>
-						<Icon name="LogOut" className="size-4.5" />
-						Sign out
-					</Link>
-				</DropdownMenuItem>
-			</DropdownMenuContent>
-		</DropdownMenu>
 	)
 }
