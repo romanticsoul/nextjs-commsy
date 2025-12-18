@@ -23,6 +23,10 @@
 			"hero-description": "Комментарии без навязанного пользовательского интерфейса. Вы создаете форму, а мы заботимся об их хранении, модерации и защите от спама",
 			"hero-action-button": "Начать работу",
 			"hero-documentation-button": "Документация"
+		},
+		"pricing": {
+			"title": "Pricing",
+			"description": "Check out our affordable pricing plans"
 		}
 	}
 }

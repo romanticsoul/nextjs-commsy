@@ -1,59 +1,21 @@
-import { TotalComments } from "@widgets/analytics/total-comments"
+import {
+	CommentsArea,
+	CommentsOverview,
+	CommentsPie,
+	CommentsTop,
+} from "@widgets/analytics/comments"
 
 export function DashboardPage() {
 	return (
 		<div>
-			<TotalComments />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
+			<div className="grid gap-4">
+				<CommentsOverview />
+				<CommentsArea />
+				<div className="grid grid-cols-2 gap-4">
+					<CommentsTop />
+					<CommentsPie />
+				</div>
+			</div>
 		</div>
 	)
 }
