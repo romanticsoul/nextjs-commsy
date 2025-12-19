@@ -1,7 +1,7 @@
 import {
 	Card,
 	CardContent,
-	// CardDescription,
+	CardDescription,
 	CardHeader,
 	CardTitle,
 } from "@shared/ui/card"
@@ -42,7 +42,7 @@ export function CommentsOverview() {
 				<Card className="flex flex-col">
 					<CardHeader className="items-center">
 						<CardTitle>Добавлено</CardTitle>
-						{/* <CardDescription>Новые комментарии за сегодня</CardDescription> */}
+						<CardDescription>Всего комментариев, принятых системой</CardDescription>
 					</CardHeader>
 					<CardContent className="flex-1">
 						<span className="text-h1">27148</span>
@@ -51,7 +51,7 @@ export function CommentsOverview() {
 				<Card className="flex flex-col">
 					<CardHeader className="items-center">
 						<CardTitle>Заблокировано</CardTitle>
-						{/* <CardDescription>за сегодня</CardDescription> */}
+						<CardDescription>Комментарии, отклонённые фильтрацией</CardDescription>
 					</CardHeader>
 					<CardContent className="flex-1">
 						<span className="text-h1">4609</span>
@@ -59,8 +59,8 @@ export function CommentsOverview() {
 				</Card>
 				<Card className="flex flex-col">
 					<CardHeader className="items-center">
-						<CardTitle>Заблокировано</CardTitle>
-						{/* <CardDescription>за сегодня</CardDescription> */}
+						<CardTitle>Процент блокировок</CardTitle>
+						<CardDescription>Доля заблокированных комментариев</CardDescription>
 					</CardHeader>
 					<CardContent className="flex-1">
 						<span className="text-h1">17%</span>

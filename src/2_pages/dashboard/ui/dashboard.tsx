@@ -1,8 +1,8 @@
 import {
 	CommentsArea,
 	CommentsOverview,
-	CommentsPie,
 	CommentsTop,
+	ToxicityRadar,
 } from "@widgets/analytics/comments"
 
 export function DashboardPage() {
@@ -13,7 +13,7 @@ export function DashboardPage() {
 				<CommentsArea />
 				<div className="grid grid-cols-2 gap-4">
 					<CommentsTop />
-					<CommentsPie />
+					<ToxicityRadar />
 				</div>
 			</div>
 		</div>

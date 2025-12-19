@@ -98,25 +98,25 @@ const chartData = [
 	// { date: "2024-06-14", added: 430, blocked: 73 },
 	// { date: "2024-06-15", added: 305, blocked: 52 },
 	// { date: "2024-06-16", added: 370, blocked: 63 },
-	{ date: "2024-06-17", added: 480, blocked: 81 },
-	{ date: "2024-06-18", added: 110, blocked: 18 },
-	{ date: "2024-06-19", added: 340, blocked: 58 },
-	{ date: "2024-06-20", added: 410, blocked: 69 },
-	{ date: "2024-06-21", added: 172, blocked: 29 },
-	{ date: "2024-06-22", added: 315, blocked: 53 },
-	{ date: "2024-06-23", added: 485, blocked: 82 },
-	{ date: "2024-06-24", added: 135, blocked: 22 },
-	{ date: "2024-06-25", added: 138, blocked: 23 },
-	{ date: "2024-06-26", added: 430, blocked: 73 },
-	{ date: "2024-06-27", added: 450, blocked: 76 },
-	{ date: "2024-06-28", added: 152, blocked: 25 },
-	{ date: "2024-06-29", added: 100, blocked: 17 },
-	{ date: "2024-06-30", added: 440, blocked: 74 },
+	{ added: 480, blocked: 81, date: "2024-06-17" },
+	{ added: 110, blocked: 18, date: "2024-06-18" },
+	{ added: 340, blocked: 58, date: "2024-06-19" },
+	{ added: 410, blocked: 69, date: "2024-06-20" },
+	{ added: 172, blocked: 29, date: "2024-06-21" },
+	{ added: 315, blocked: 53, date: "2024-06-22" },
+	{ added: 485, blocked: 82, date: "2024-06-23" },
+	{ added: 135, blocked: 22, date: "2024-06-24" },
+	{ added: 138, blocked: 23, date: "2024-06-25" },
+	{ added: 430, blocked: 73, date: "2024-06-26" },
+	{ added: 450, blocked: 76, date: "2024-06-27" },
+	{ added: 152, blocked: 25, date: "2024-06-28" },
+	{ added: 100, blocked: 17, date: "2024-06-29" },
+	{ added: 440, blocked: 74, date: "2024-06-30" },
 ]
 
 const chartConfig = {
 	added: {
-		color: "var(--chart-2)",
+		color: "var(--chart-1)",
 		label: "Добавлено",
 	},
 	blocked: {
@@ -129,8 +129,8 @@ export function CommentsArea() {
 	return (
 		<Card>
 			<CardHeader>
-				<CardTitle>Tooltip - Default</CardTitle>
-				<CardDescription>Default tooltip with ChartTooltipContent.</CardDescription>
+				<CardTitle>Comment activity</CardTitle>
+				<CardDescription>Accepted vs blocked comments over time</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer className="h-96 w-full" config={chartConfig}>
